@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"disabled":false,"guestpath":"/vagrant","hostpath":"/home/elmago/devops-mao-na-massa/vagrant-lab","type":"rsync","__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
