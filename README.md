@@ -29,16 +29,32 @@ MySQL Database
 
 # Tecnologias Utilizadas
 
-Vagrant, Ansible, MySQL, Java OpenJDK, Maven, Spring Boot, Git, systemd, firewalld, NFS
+### Infraestrutura como Código (IaC)
+- Vagrant
+- Ansible
+
+### Banco de Dados
+- MySQL
+
+### Desenvolvimento de Aplicação
+- Java OpenJDK
+- Maven
+- Spring Boot
+- Git
+
+### Serviços e Sistema Operacional
+- systemd
+- firewalld
+- NFS
 
 ## Pré-requisitos
 
 Para executar este laboratório é necessário possuir instalado:
 
-Vagrant;
-VirtualBox;
-Git;
-Conexão com internet para download das dependências;
+- Vagrant
+- VirtualBox;
+- Git;
+- Conexão com internet para download das dependências;
 
 ## Requisitos de Hardware recomendados
 | Recurso | Recomendado |
