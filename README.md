@@ -110,36 +110,34 @@ Exemplo de requisição:
 curl http://app01:8080/api/notes
 
 ## Portas Utilizadas
-
-Porta	  Serviço
-8080	  Aplicação Spring Boot
-3306	  MySQL
+| Porta | Serviço |
+|-----|-----|
+| Porta | Serviço |
+| 8080 | Aplicação Spring Boot |
+| 3306 | MySQL |
 
 ## Objetivos do Projeto
 
-Este laboratório demonstra conceitos importantes de DevOps:
+Este laboratório demonstra conceitos importantes de **DevOps**:
 
-Infraestrutura como código (IaC)
-Provisionamento automatizado
-Configuração de servidores com Ansible
-Deploy automatizado de aplicações
-Integração entre aplicação e banco de dados
-Configuração de serviços Linux (systemd)
-Troubleshooting de rede e firewall
+- Infraestrutura como código (IaC)
+- Provisionamento automatizado
+- Configuração de servidores com Ansible
+- Deploy automatizado de aplicações
+- Integração entre aplicação e banco de dados
+- Configuração de serviços Linux (systemd)
+- Troubleshooting de rede e firewall
 
 ## Referências
 
-Este projeto foi desenvolvido com base no curso:
+Este projeto foi desenvolvido com base no curso abaixo e algumas adaptações e melhorias foram realizadas durante os estudos para fins educacionais e de portfólio:
 
-DevOps Mão na Massa (Udemy)
-Instrutor: Glaucio Guerra
+**DevOps Mão na Massa (Udemy)**
+Instrutor: **Glaucio Guerra**
 
-Algumas adaptações e melhorias foram realizadas durante os estudos para fins educacionais e de portfólio.
-
-Aplicação utilizada no laboratório:
-
+App utilizada no laboratório:
 https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial
 
 ## Autor
 
-Projeto desenvolvido como laboratório prático de estudos em DevOps e automação de infraestrutura
+Projeto desenvolvido por **Danilo Cardozo** como laboratório prático de estudos em DevOps e automação de infraestrutura
