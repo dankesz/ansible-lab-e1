@@ -85,7 +85,7 @@ Para executar este laboratório é necessário possuir instalado:
 ### Clonar o repositório
 ```bash
 $ git clone https://github.com/dankesz/ansible-lab-e1.git
-$ cd ansible-lab
+$ cd ansible-lab-e1/ansible-lab
 ```
 ### Subir as máquinas virtuais
 ```bash
