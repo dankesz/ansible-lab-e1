@@ -1,126 +1,59 @@
-DevOps Mão na Massa Lab
+# DevOps Mão na Massa Lab
 
-Laboratório prático de DevOps para provisionamento automático de infraestrutura e deploy de aplicação Java utilizando Vagrant e Ansible.
+Laboratório prático de **DevOps** para provisionamento automatizado de infraestrutura e deploy de uma aplicação **Java Spring Boot** integrada a um banco de dados **MySQL**, utilizando **Vagrant** e **Ansible**.
 
-O ambiente cria automaticamente máquinas virtuais, configura serviços e realiza o deploy de uma aplicação REST integrada com banco de dados MySQL.
+Este projeto demonstra conceitos de **Infraestrutura como Código (IaC)**, automação de servidores e deploy automatizado de aplicações.
 
-Arquitetura do ambiente
+---
 
-O laboratório cria três máquinas virtuais:
+## Arquitetura do Ambiente
 
-control-node – nó de controle do Ansible
-app01 – servidor da aplicação
-db01 – servidor de banco de dados MySQL
+O laboratório cria automaticamente **três máquinas virtuais**:
 
-Rede privada utilizada:
+| Host | Função | IP |
+|-----|-----|-----|
+| control-node | Nó de controle do Ansible | 192.168.56.2 |
+| app01 | Servidor da aplicação | 192.168.56.3 |
+| db01 | Servidor de banco de dados | 192.168.56.4 |
 
-192.168.56.2 control-node
-192.168.56.3 app01
-192.168.56.4 db01
+## Fluxo da aplicação:
 
-Fluxo da arquitetura:
-
+```text
 Cliente
-↓
+   ↓
 API REST (Spring Boot)
-↓
+   ↓
 MySQL Database
 
-Tecnologias utilizadas
+## Tecnologias Utilizadas
 
 Vagrant
-
 Ansible
-
 MySQL
-
 Java OpenJDK
-
 Maven
-
 Spring Boot
-
-systemd
-
-firewalld
-
 Git
+systemd
+firewalld
+NFS
 
-Pré-requisitos
+## Pré-requisitos
 
-Para executar este laboratório em sua máquina é necessário possuir:
+Para executar este laboratório é necessário possuir instalado:
 
-Vagrant instalado
-
-VirtualBox instalado
-
-Git instalado
-
+Vagrant
+VirtualBox
+Git
 Conexão com internet para download das dependências
 
-Sistema Linux ou Windows com suporte ao Vagrant
+## Requisitos de Hardware recomendados
+Recurso	Recomendado
+RAM	8 GB
+CPU	4 cores
+Disco	10 GB livres
 
-Memória recomendada:
-
-mínimo: 8 GB de RAM
-
-Espaço em disco recomendado:
-
-10 GB livres
-
-Como executar o laboratório
-
-Clone o repositório:
-
-git clone <repo>
-cd ansible-lab
-
-Suba o ambiente:
-
-vagrant up
-
-Acesse o control-node:
-
-vagrant ssh
-
-Execute o playbook Ansible:
-
-ansible-playbook site.yml
-Deploy da aplicação
-
-A aplicação utilizada no laboratório é baseada em um projeto Spring Boot que implementa uma API REST para gerenciamento de notas.
-
-Repositório utilizado:
-
-https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial
-
-Durante o provisionamento o Ansible:
-
-instala dependências (Java, Maven, Git)
-
-clona o repositório da aplicação
-
-realiza o build com Maven
-
-configura o arquivo application.properties
-
-cria um serviço systemd
-
-inicia automaticamente a aplicação
-
-A aplicação é exposta na porta:
-
-8080
-
-Exemplo de teste da API:
-
-curl http://app01:8080/api/notes
-Portas utilizadas
-
-8080 – aplicação Spring Boot
-3306 – banco de dados MySQL
-
-Estrutura do projeto
+## Estrutura do Projeto
 ansible-lab
 │
 ├── roles
@@ -133,39 +66,85 @@ ansible-lab
 │
 ├── site.yml
 │
+├── provision.sh
+│
 └── Vagrantfile
-Objetivos do laboratório
 
-Este projeto demonstra conceitos fundamentais de DevOps:
+## Como Executar o Laboratório
+
+Clone o repositório:
+
+$ git clone <repo>
+$ cd ansible-lab
+
+Suba as máquinas virtuais:
+
+$vagrant up
+
+Acesse o nó de controle:
+
+$ vagrant ssh
+
+Execute o playbook Ansible:
+
+$ ansible-playbook site.yml
+
+## Deploy da Aplicação
+
+Durante o provisionamento o Ansible executa automaticamente:
+
+instalação do Java
+instalação do Maven
+instalação do Git
+clonagem da aplicação
+build com Maven
+configuração do banco de dados
+criação de serviço systemd
+inicialização da aplicação
+
+## Repositório da aplicação utilizado no laboratório:
+
+https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial
+
+## API REST
+
+A aplicação disponibiliza uma API REST para gerenciamento de notas.
+
+Exemplo de requisição:
+
+curl http://app01:8080/api/notes
+
+## Portas Utilizadas
+
+Porta	  Serviço
+8080	  Aplicação Spring Boot
+3306	  MySQL
+
+## Objetivos do Projeto
+
+Este laboratório demonstra conceitos importantes de DevOps:
 
 Infraestrutura como código (IaC)
-
 Provisionamento automatizado
-
 Configuração de servidores com Ansible
-
 Deploy automatizado de aplicações
-
 Integração entre aplicação e banco de dados
-
 Configuração de serviços Linux (systemd)
-
 Troubleshooting de rede e firewall
 
-Referências
+## Referências
 
-Este laboratório foi desenvolvido com base no curso:
+Este projeto foi desenvolvido com base no curso:
 
 DevOps Mão na Massa (Udemy)
-
 Instrutor: Glaucio Guerra
 
 Algumas adaptações e melhorias foram realizadas durante os estudos para fins educacionais e de portfólio.
 
-Repositório da aplicação utilizada no laboratório:
+Aplicação utilizada no laboratório:
 
 https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial
 
-Autor
+## Autor
 
-Projeto desenvolvido como laboratório prático de estudos em DevOps.
+Projeto desenvolvido como laboratório prático de estudos em DevOps e automação de infraestrutura
