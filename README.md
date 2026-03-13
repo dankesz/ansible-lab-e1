@@ -84,20 +84,16 @@ Para executar este laboratório é necessário possuir instalado:
 ## Como Executar o Laboratório
 ### Clonar o repositório
 ```bash
-$ git clone https://github.com/dankesz/devops.git
-$ cd devosp/ansible-lab
+$ git clone https://github.com/dankesz/ansible-lab-e1.git
+$ cd ansible-lab
 ```
 ### Subir as máquinas virtuais
 ```bash
 $ cd control-node
-#
 $ vagrant up
-
-Repita para app01 e db01!!!
-
 ```
-Isso vai criar as VMs control-node, app01 e db01.
-O script provision.sh será executado automaticamente.
+Repita para app01 e db01!!!
+Isso vai criar as VMs control-node, app01 e db01.O script provision.sh será executado automaticamente.
 
 ### Acessar o nó de controle
 Dentro do diretório control-node rode o comando:
