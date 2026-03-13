@@ -84,29 +84,35 @@ Para executar este laboratório é necessário possuir instalado:
 ## Como Executar o Laboratório
 ### Clonar o repositório
 ```bash
-git clone <seu-repositorio>
-cd ansible-lab
+$ git clone https://github.com/dankesz/devops.git
+$ cd devosp/ansible-lab
 ```
 ### Subir as máquinas virtuais
 ```bash
-vagrant up
+$ cd control-node
+#
+$ vagrant up
+
+Repita para app01 e db01!!!
+
 ```
 Isso vai criar as VMs control-node, app01 e db01.
 O script provision.sh será executado automaticamente.
 
 ### Acessar o nó de controle
+Dentro do diretório control-node rode o comando:
 ```bash
-vagrant ssh control-node
+$ vagrant ssh control-node
 ```
 ### Executar o playbook do banco de dados
 ```bash
-ansible-playbook playbooks/db.yaml
+$ ansible-playbook /vagrant/playbooks/db.yaml
 ```
 Isso vai instalar o MySQL, criar o banco notes, criar o usuário notesapp e liberar a porta 3306 no firewall.
 
 ### Executar o playbook da aplicação
 ```bash
-ansible-playbook playbooks/app.yaml
+ansible-playbook /vagrant/playbooks/app.yaml
 ```
 Isso vai:
 - criar usuário app
@@ -120,7 +126,7 @@ Isso vai:
 
 ### Testar a aplicação
 ```bash
-curl http://192.168.56.3:8080/api/notes
+$ curl http://192.168.56.3:8080/api/notes
 ```
 Você deve receber um JSON ou lista de notas, indicando que a API REST está funcionando.
 
@@ -128,15 +134,15 @@ Você deve receber um JSON ou lista de notas, indicando que a API REST está fun
 
 No app01:
 ```bash
-sudo systemctl status notes
-sudo firewall-cmd --list-ports
+$ sudo systemctl status notes
+$ sudo firewall-cmd --list-ports
 ```
 No db01:
 ```bash
-sudo firewall-cmd --list-ports
-mysql -u root -p
+$ sudo firewall-cmd --list-ports
+$ mysql -u root -p
 # senha: devopsmaonamassa
-SHOW DATABASES;
+$ SHOW DATABASES;
 ```
 
 ## Deploy da Aplicação
