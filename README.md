@@ -18,12 +18,14 @@ O laboratório cria automaticamente **três máquinas virtuais**:
 
 ## Fluxo da aplicação:
 
-text
+```text
 Cliente
    ↓
 API REST (Spring Boot)
    ↓
 MySQL Database
+```
+
 
 # Tecnologias Utilizadas
 
@@ -54,7 +56,7 @@ CPU	4 cores
 Disco	10 GB livres
 
 ## Estrutura do Projeto
-ansible-lab
+```ansible-lab
 │
 ├── roles
 │   ├── configuracao-default-so
@@ -69,6 +71,7 @@ ansible-lab
 ├── provision.sh
 │
 └── Vagrantfile
+```
 
 ## Como Executar o Laboratório
 
