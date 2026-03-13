@@ -65,6 +65,10 @@
         state: restarted
   roles:
       - configuracao-default-so
+      - role: firewall
+        vars:
+          firewall_ports:
+            - 8080/tcp
   handlers:
     - name: reload app
       systemd:
