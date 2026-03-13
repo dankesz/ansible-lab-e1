@@ -1,5 +1,3 @@
-# Ignorar tudo
-*
-
-# Exceto o ansible-lab
-!ansible-lab/
+comandosansible/
+vagrant-lab/
+ansible-lab/.vagrant/
