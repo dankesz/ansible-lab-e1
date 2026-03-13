@@ -29,31 +29,23 @@ MySQL Database
 
 # Tecnologias Utilizadas
 
-Vagrant
-Ansible
-MySQL
-Java OpenJDK
-Maven
-Spring Boot
-Git
-systemd
-firewalld
-NFS
+Vagrant, Ansible, MySQL, Java OpenJDK, Maven, Spring Boot, Git, systemd, firewalld, NFS
 
 ## Pré-requisitos
 
 Para executar este laboratório é necessário possuir instalado:
 
-Vagrant
-VirtualBox
-Git
-Conexão com internet para download das dependências
+Vagrant;
+VirtualBox;
+Git;
+Conexão com internet para download das dependências;
 
 ## Requisitos de Hardware recomendados
-Recurso	Recomendado
-RAM	8 GB
-CPU	4 cores
-Disco	10 GB livres
+| Recurso | Recomendado |
+|-----|-----|
+| RAM | 8 GB |
+| CPU | 4 cores |
+| Disco | 10 GB livres |
 
 ## Estrutura do Projeto
 ```ansible-lab
@@ -82,7 +74,7 @@ $ cd ansible-lab
 
 Suba as máquinas virtuais:
 
-$vagrant up
+$ vagrant up
 
 Acesse o nó de controle:
 
@@ -94,16 +86,16 @@ $ ansible-playbook site.yml
 
 ## Deploy da Aplicação
 
-Durante o provisionamento o Ansible executa automaticamente:
+Durante o provisionamento o Ansible executa automaticamente essas etapas:
 
-instalação do Java
-instalação do Maven
-instalação do Git
-clonagem da aplicação
-build com Maven
-configuração do banco de dados
-criação de serviço systemd
-inicialização da aplicação
+1. Instalação do Java
+2. Instalação do Maven
+3. Instalação do Git
+4. Clonagem da aplicação
+5. Build com Maven
+6. Configuração do banco de dados
+7. Criação de serviço systemd
+8. Inicialização da aplicação
 
 ## Repositório da aplicação utilizado no laboratório:
 
