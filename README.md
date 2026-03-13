@@ -18,14 +18,14 @@ O laboratório cria automaticamente **três máquinas virtuais**:
 
 ## Fluxo da aplicação:
 
-```text
+text
 Cliente
    ↓
 API REST (Spring Boot)
    ↓
 MySQL Database
 
-## Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
 Vagrant
 Ansible
