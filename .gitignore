@@ -1,5 +1,5 @@
-comandosansible/
-README.md
-vagrant-lab/
-.vagrant
+# Ignorar tudo
+*
 
+# Exceto o ansible-lab
+!ansible-lab/
