@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Vagrant
 .vagrant/
 
@@ -10,3 +11,8 @@
 
 # Ansible
 *.retry
+=======
+comandosansible/
+vagrant-lab/
+ansible-lab/.vagrant/
+>>>>>>> a428e2f4037b9d2b58db26f4f894734f37314047
