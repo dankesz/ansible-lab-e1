@@ -1,7 +1,0 @@
-- name: Liberar portas necessárias
-  firewalld:
-    port: "{{ item }}"
-    permanent: yes
-    state: enabled
-    immediate: yes
-  loop: "{{ firewall_ports }}"
