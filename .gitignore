@@ -1,0 +1,12 @@
+# Vagrant
+.vagrant/
+
+# SSH keys (extra segurança)
+*.pem
+*.key
+
+# arquivos temporários
+*.log
+
+# Ansible
+*.retry

@@ -1,0 +1,26 @@
+---
+- name: Configurar servidor de banco de dados
+  hosts: db01
+
+  user: vagrant
+  become: yes
+  vars_files:
+    - vars/main.yaml
+  vars:
+    - dbname: "db01"
+    - dbusername: "root"
+    - dbpassword: "devopsmaonamassa"
+  tasks:
+    - name: liberar mysql no firewall
+      firewalld:
+        service: mysql
+        permanent: yes
+        state: enabled
+        immediate: yes
+  roles:
+    - configuracao-default-so 
+    - role: geerlingguy.mysql
+    - role: firewall
+      vars:
+        firewall_ports:
+          - 3306/tcp
